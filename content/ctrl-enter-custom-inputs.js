@@ -27,6 +27,10 @@ function shouldHandleCtrlEnter(url, event) {
   else if (url.startsWith("https://m365.cloud.microsoft/chat")) {
     return event.target.id === "m365-chat-editor-target-element";
   }
+  else if (url.startsWith("https://aistudio.google.com")) {
+    return event.target.tagName === "TEXTAREA" || 
+           (event.target.tagName === "DIV" && event.target.contentEditable === "true");
+  }
   return false;
 }
 

@@ -47,7 +47,8 @@
         "https://chat.deepseek.com/*",
         "https://github.com/*",
         "https://grok.com/*",
-        "https://m365.cloud.microsoft/*"
+        "https://m365.cloud.microsoft/*",
+        "https://aistudio.google.com/*"
       ],
       "js": [
         "content/ctrl-enter-utils.js",
@@ -77,7 +78,8 @@
     "https://github.com/*",
     "https://grok.com/*",
     "https://copilot.microsoft.com/*",
-    "https://m365.cloud.microsoft/*"
+    "https://m365.cloud.microsoft/*",
+    "https://aistudio.google.com/*"
   ],
   "action": {
     "default_popup": "popup/popup.html",
