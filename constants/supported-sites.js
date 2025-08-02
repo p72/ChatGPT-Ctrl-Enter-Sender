@@ -15,5 +15,6 @@ export const SUPPORTED_SITES = [
   "grok.com",
   "copilot.microsoft.com",
   "m365.cloud.microsoft",
-  "aistudio.google.com"
+  "aistudio.google.com",
+  "github.com/spark"
 ];

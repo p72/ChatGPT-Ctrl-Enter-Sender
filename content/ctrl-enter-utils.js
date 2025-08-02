@@ -12,10 +12,18 @@ function getHostname() {
 
 function applySiteSetting() {
   const hostname = getHostname();
+  const url = window.location.href;
 
   chrome.storage.sync.get("siteSettings", (data) => {
     const settings = data.siteSettings || {};
-    const isEnabled = settings[hostname] ?? true;
+    
+    // Special handling for GitHub Spark
+    let isEnabled;
+    if (url.startsWith("https://github.com/spark")) {
+      isEnabled = settings["github.com/spark"] ?? true;
+    } else {
+      isEnabled = settings[hostname] ?? true;
+    }
 
     if (isEnabled) {
       enableSendingWithCtrlEnter();
